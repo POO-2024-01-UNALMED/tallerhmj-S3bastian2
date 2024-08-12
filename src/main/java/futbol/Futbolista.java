@@ -1,3 +1,4 @@
+package futbol;
 import java.lang.Comparable;
 
 public abstract class Futbolista implements Comparable<Object> {

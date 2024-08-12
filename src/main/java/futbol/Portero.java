@@ -4,7 +4,7 @@ public class Portero extends Futbolista {
     public short golesRecibidos;
     public byte dorsal;
 
-    public Portero(String nombre, int edad, String posicion, short golesRecibidos, byte dorsal) {
+    public Portero(String nombre, int edad, short golesRecibidos, byte dorsal) {
         super(nombre, edad, "Portero");
         this.golesRecibidos = golesRecibidos;
         this.dorsal = dorsal;
@@ -17,7 +17,7 @@ public class Portero extends Futbolista {
 
     @Override
     public String toString() {
-        return "El futbolista " + nombre + " tiene " + edad + ", y juega de " + posicion + " con el dorsal " + dorsal + ". Le han marcado " + golesRecibidos;
+        return "El futbolista " + getNombre() + " tiene " + getEdad() + ", y juega de " + getPosicion() + " con el dorsal " + dorsal + ". Le han marcado " + golesRecibidos;
     }
 
     @Override

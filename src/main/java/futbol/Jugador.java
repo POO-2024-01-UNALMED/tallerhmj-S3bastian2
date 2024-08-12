@@ -18,18 +18,21 @@ public class Jugador extends Futbolista implements Comparable<Object> {
     }
 
     @Override
-    public int compareTo(Jugador otroJugador) {
-        diferencia = this.edad - otroJugador.getEdad();
-
-        if (diferencia < 0) {
-            return -diferencia;
-        } else {
-            return diferencia;
+    public int compareTo(Object f) {
+        if(f instanceof Jugador){
+            Jugador p = (Jugador) f;
+            return Math.abs(this.getEdad() - p.getEdad());
         }
+        else {return this.getEdad();}
     }
 
     public String toString() {
-        return "El futbolista " + nombre + " tiene" + edad + ", y juega de " + posicion + " con el dorsal" + dorsal + ". Ha marcado " + golesMarcados;
+        return "El futbolista " + getNombre() + " tiene" + getEdad() + ", y juega de " + getPosicion() + " con el dorsal" + dorsal + ". Ha marcado " + golesMarcados;
+    }
+
+    @Override
+    public boolean jugarConLasManos() {
+        return false;
     }
 
 }

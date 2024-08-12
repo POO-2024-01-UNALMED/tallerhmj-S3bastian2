@@ -23,15 +23,12 @@ public abstract class Futbolista implements Comparable<Object> {
     
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
+        if (this == obj) return true;
 
-        if (obj == null) {
-            return false;
-        }
+        if (obj == null || getClass() != obj.getClass()) return false; 
 
-        return nombre.equals(f.nombre) && edad == f.edad && posicion.equals(f.posicion);
+        Futbolista f = (Futbolista) obj;
+        return edad == f.edad && nombre.equals(f.nombre) && posicion.equals(f.posicion);
     }
 
     public abstract boolean jugarConLasManos(); 

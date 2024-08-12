@@ -1,7 +1,6 @@
 package futbol;
-import java.lang.Comparable;
 
-public class Jugador extends Futbolista implements Comparable<Object> {
+public class Jugador extends Futbolista {
     public short golesMarcados;
     public byte dorsal;
 

@@ -28,12 +28,4 @@ public class Portero extends Futbolista {
         }
         else {return this.golesRecibidos;}
     }
-
-    public short getGolesRecibidos() {
-        return golesRecibidos;
-    }
-
-    public void setGolesRecibidos(short golesRecibidos) {
-        this.golesRecibidos = golesRecibidos;
-    }
 }

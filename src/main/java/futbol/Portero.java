@@ -1,15 +1,13 @@
 package futbol;
-import java.lang.Comparable;
 
-public class Portero extends Futbolista implements Comparable<Object> {
+public class Portero extends Futbolista {
     public short golesRecibidos;
     public byte dorsal;
 
     public Portero(String nombre, int edad, String posicion, short golesRecibidos, byte dorsal) {
-        super(nombre, edad, "portero");
+        super(nombre, edad, "Portero");
         this.golesRecibidos = golesRecibidos;
         this.dorsal = dorsal;
-        this.posicion = "portero";
     }
 
     public boolean jugarConLasManos() {

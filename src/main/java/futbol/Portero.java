@@ -10,9 +10,12 @@ public class Portero extends Futbolista {
         this.dorsal = dorsal;
     }
 
+    @Override
     public boolean jugarConLasManos() {
         return true;
     }
+
+    @Override
     public String toString() {
         return "El futbolista " + nombre + " tiene" + edad + ", y juega de " + posicion + " con el dorsal" + dorsal + ". Le han marcado " + golesRecibidos;
     }
